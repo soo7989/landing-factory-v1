@@ -1,6 +1,7 @@
 {
   "settings": {
-    "isPremium": false
+    "isPremium": false,
+    "siteUrl": "https://landing-factory-v1.pages.dev"
   },
   "sections": {
     "heroCta": "약속 살펴보기",
