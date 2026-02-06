@@ -27,11 +27,13 @@ export default function CandidatePage() {
       {/* Hero Section */}
       <section className="w-full px-4 py-12 md:py-20">
         <div className="max-w-2xl mx-auto flex flex-col items-center text-center gap-6">
-          <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-blue-700 overflow-hidden flex items-center justify-center border-4 border-slate-200">
-            <span className="text-white text-4xl md:text-5xl font-bold">
-              {content.profile.name.charAt(0)}
-            </span>
-          </div>
+          {/* 프로필 이미지 섹션 */}
+          <img
+            src={content.profile.image}
+            alt={`${content.profile.name} 프로필 사진`}
+            className="w-32 h-32 rounded-full border-4 border-blue-100 shadow-lg mx-auto object-cover"
+            style={{ minWidth: 128, minHeight: 128 }}
+          />
 
           <div>
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-2 text-balance">
