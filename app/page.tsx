@@ -23,28 +23,28 @@ export default function CandidatePage() {
   }
 
   return (
-    <main className={`w-full min-h-screen bg-background text-foreground ${!isPremium ? 'pb-16' : ''}`}>
+    <main className={`w-full min-h-screen bg-gradient-to-b from-slate-50 to-white text-foreground ${!isPremium ? 'pb-16' : ''}`}>
       {/* Hero Section */}
-      <section className="w-full px-4 py-12 md:py-20 bg-gradient-to-b from-slate-50 to-background">
+      <section className="w-full px-4 py-12 md:py-20">
         <div className="max-w-2xl mx-auto flex flex-col items-center text-center gap-6">
-          <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-secondary overflow-hidden flex items-center justify-center border-4 border-secondary">
+          <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-blue-700 overflow-hidden flex items-center justify-center border-4 border-slate-200">
             <span className="text-white text-4xl md:text-5xl font-bold">
               {content.profile.name.charAt(0)}
             </span>
           </div>
 
           <div>
-            <h1 className="text-4xl md:text-5xl font-bold text-primary mb-2 text-balance">
+            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-2 text-balance">
               {content.profile.name}
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground font-medium">
+            <p className="text-xl md:text-2xl text-slate-600 font-medium">
               {content.profile.slogan}
             </p>
           </div>
 
           <Button
             size="lg"
-            className="mt-4 bg-secondary hover:bg-secondary/90 text-white px-8 py-3 text-lg rounded-lg font-semibold min-h-[48px]"
+            className="mt-4 h-12 min-h-12 bg-blue-700 hover:bg-blue-800 text-white px-8 text-lg rounded-lg font-bold"
           >
             {s.heroCta}
           </Button>
@@ -52,13 +52,13 @@ export default function CandidatePage() {
       </section>
 
       {/* Promises Section */}
-      <section className="w-full px-4 py-16 md:py-24 bg-background">
+      <section className="w-full px-4 py-16 md:py-24">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               {s.promisesTitle}
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-slate-600">
               {s.promisesSubtitle}
             </p>
           </div>
@@ -69,15 +69,15 @@ export default function CandidatePage() {
               return (
                 <Card
                   key={promise.title}
-                  className="p-6 border border-border hover:border-secondary/50 transition-colors"
+                  className="p-6 bg-white shadow-md border border-slate-100 hover:border-slate-200 transition-colors"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center mb-4">
-                    <IconComponent className="w-6 h-6 text-secondary" />
+                  <div className="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center mb-4">
+                    <IconComponent className="w-6 h-6 text-blue-700" />
                   </div>
-                  <h3 className="text-xl font-bold text-primary mb-2">
+                  <h3 className="text-xl font-bold text-slate-900 mb-2">
                     {promise.title}
                   </h3>
-                  <p className="text-muted-foreground">
+                  <p className="text-slate-600">
                     {promise.description}
                   </p>
                 </Card>
@@ -88,46 +88,46 @@ export default function CandidatePage() {
       </section>
 
       {/* About Section */}
-      <section className="w-full px-4 py-16 md:py-24 bg-slate-50">
+      <section className="w-full px-4 py-16 md:py-24">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
             {s.aboutTitle}
           </h2>
-          <div className="space-y-4 text-lg text-foreground leading-relaxed">
+          <div className="space-y-4 text-lg text-slate-600 leading-relaxed">
             <p>{content.profile.description}</p>
             <p>{s.aboutParagraph2}</p>
             <p>{s.aboutParagraph3}</p>
           </div>
-          <button className="mt-6 text-secondary hover:text-secondary/80 font-semibold flex items-center gap-2 min-h-[48px]">
+          <button className="mt-6 h-12 min-h-12 px-4 text-blue-700 hover:text-blue-800 font-bold flex items-center gap-2">
             {s.aboutReadMore}
           </button>
         </div>
       </section>
 
       {/* Support & Contact Section */}
-      <section className="w-full px-4 py-16 md:py-24 bg-background">
+      <section className="w-full px-4 py-16 md:py-24">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-12 text-center">
             {s.supportTitle}
           </h2>
 
-          <Card className="p-8 mb-8 border border-border bg-slate-50">
-            <h3 className="text-2xl font-bold text-primary mb-2">
+          <Card className="p-8 mb-8 bg-white shadow-md border border-slate-100">
+            <h3 className="text-2xl font-bold text-slate-900 mb-2">
               {s.donationTitle}
             </h3>
-            <p className="text-muted-foreground mb-6">
+            <p className="text-slate-600 mb-6">
               {s.donationDescription}
             </p>
             <div className="space-y-3">
-              <div className="flex items-center justify-between p-4 bg-white rounded-lg border border-border">
-                <span className="font-mono text-lg font-semibold text-primary">
+              <div className="flex items-center justify-between p-4 bg-slate-50 rounded-lg border border-slate-100">
+                <span className="font-mono text-lg font-bold text-slate-900">
                   {content.contact.bank}
                 </span>
                 <Button
                   size="sm"
                   variant="outline"
                   onClick={handleCopyAccount}
-                  className="flex items-center gap-2 bg-transparent min-h-[48px]"
+                  className="flex items-center gap-2 bg-white h-12 min-h-12 border-slate-200"
                 >
                   {copied ? (
                     <>
@@ -147,13 +147,13 @@ export default function CandidatePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <a href={`sms:${content.contact.phone}`}>
-              <Button className="w-full bg-secondary hover:bg-secondary/90 text-white py-6 text-base rounded-lg font-semibold min-h-[48px]">
+              <Button className="w-full h-12 min-h-12 bg-blue-700 hover:bg-blue-800 text-white text-base rounded-lg font-bold">
                 <MessageSquare className="w-5 h-5 mr-2" />
                 {s.smsButton}
               </Button>
             </a>
             <a href={content.contact.link} target="_blank" rel="noreferrer">
-              <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-6 text-base rounded-lg font-semibold min-h-[48px]">
+              <Button className="w-full h-12 min-h-12 bg-blue-700 hover:bg-blue-800 text-white text-base rounded-lg font-bold">
                 <Heart className="w-5 h-5 mr-2" />
                 {s.onlineButton}
               </Button>
@@ -163,9 +163,9 @@ export default function CandidatePage() {
       </section>
 
       {/* Footer */}
-      <footer className="w-full px-4 py-8 bg-primary text-primary-foreground">
+      <footer className="w-full px-4 py-8 bg-slate-900 text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-sm">
+          <p className="text-sm text-slate-300">
             {(s.footerCopyright as string).replace('{name}', content.profile.name)}
           </p>
         </div>
@@ -174,12 +174,12 @@ export default function CandidatePage() {
       {/* Sticky Banner (Freemium) - only when isPremium is false */}
       {!isPremium && (
         <div
-          className="fixed bottom-0 left-0 right-0 z-50 px-4 py-3 bg-primary text-primary-foreground text-center font-semibold text-base shadow-lg min-h-[48px] flex items-center justify-center"
+          className="fixed bottom-0 left-0 right-0 z-50 px-4 py-3 bg-slate-900 text-white text-center font-bold text-base shadow-lg h-12 min-h-12 flex items-center justify-center"
           role="banner"
         >
           <a
             href="#"
-            className="block w-full py-2 touch-manipulation"
+            className="block w-full py-3 touch-manipulation"
             aria-label={s.stickyBanner}
           >
             {s.stickyBanner}
