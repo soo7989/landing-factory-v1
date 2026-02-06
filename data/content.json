@@ -1,4 +1,42 @@
 {
+  "settings": {
+    "isPremium": false
+  },
+  "sections": {
+    "heroCta": "약속 살펴보기",
+    "promisesTitle": "우리의 약속",
+    "promisesSubtitle": "우리 동네를 위해 꼭 지킬 세 가지 약속입니다.",
+    "aboutTitle": "후보 소개",
+    "aboutReadMore": "자세히 보기 →",
+    "aboutParagraph2": "후보의 약속과 정책은 모두 우리 동네 주민 한 분 한 분의 목소리에서 출발합니다. 작은 불편부터 큰 변화까지, 직접 듣고 바로 움직이겠습니다.",
+    "aboutParagraph3": "동네 구석구석을 매일같이 발로 뛰며, 생활 정치가 무엇인지 보여드리겠습니다.",
+    "supportTitle": "후원 & 연락",
+    "donationTitle": "후원 계좌",
+    "donationDescription": "작은 힘이 모여 큰 변화를 만듭니다. 한 분 한 분의 응원이 더 나은 동네를 만들 힘이 됩니다.",
+    "copyButton": "복사하기",
+    "copiedButton": "복사됨",
+    "smsButton": "문자로 응원 보내기",
+    "onlineButton": "온라인으로 참여하기",
+    "footerCopyright": "© 2025 {name}. All rights reserved.",
+    "stickyBanner": "💸 0원으로 명함 만들기 >"
+  },
+  "promises": [
+    {
+      "title": "우리 동네 우선",
+      "description": "동네 현안을 가장 먼저 챙기고, 생활이 바로 좋아지는 정책부터 실행하겠습니다.",
+      "icon": "Heart"
+    },
+    {
+      "title": "언제든 소통",
+      "description": "24시간 열려 있는 연락처로 언제든지 의견을 듣고, 빠르게 답하겠습니다.",
+      "icon": "MessageSquare"
+    },
+    {
+      "title": "일자리와 상권",
+      "description": "우리 동네 소상공인과 청년을 위한 일자리·상권 활성화 정책을 집중 지원하겠습니다.",
+      "icon": "Heart"
+    }
+  ],
   "profile": {
     "name": "김철수",
     "slogan": "우리 동네를 확 바꿀 사람",
