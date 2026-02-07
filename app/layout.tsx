@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
+import content from "@/data/content.json";
 import "./globals.css";
+
+const analyticsToken = content.settings.analyticsToken ?? "";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,6 +32,13 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        {analyticsToken ? (
+          <Script
+            src="https://static.cloudflareinsights.com/beacon.min.js"
+            data-cf-beacon={JSON.stringify({ token: analyticsToken })}
+            strategy="afterInteractive"
+          />
+        ) : null}
       </body>
     </html>
   );

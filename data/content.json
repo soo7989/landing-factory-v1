@@ -1,7 +1,8 @@
 {
   "settings": {
     "isPremium": false,
-    "siteUrl": "https://landing-factory-v1.pages.dev"
+    "siteUrl": "https://landing-factory-v1.pages.dev",
+    "analyticsToken": "d1575fc730364ac5a7168f7bb2669270"
   },
   "sections": {
     "heroCta": "약속 살펴보기",
