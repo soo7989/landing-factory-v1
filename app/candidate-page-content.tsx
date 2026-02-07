@@ -16,6 +16,7 @@ export default function CandidatePageContent() {
   const [copied, setCopied] = useState(false)
   const s = content.sections as Record<string, string>
   const isPremium = (content.settings as { isPremium: boolean }).isPremium
+  const purchaseUrl = (content.settings as { purchaseUrl?: string }).purchaseUrl ?? ""
 
   const handleCopyAccount = () => {
     navigator.clipboard.writeText(content.contact.bank)
@@ -187,13 +188,21 @@ export default function CandidatePageContent() {
           className="fixed bottom-0 left-0 right-0 z-50 px-4 py-3 bg-slate-900 text-white text-center font-bold text-base shadow-lg h-12 min-h-12 flex items-center justify-center"
           role="banner"
         >
-          <a
-            href="#"
-            className="block w-full py-3 touch-manipulation"
-            aria-label={s.stickyBanner}
-          >
-            {s.stickyBanner}
-          </a>
+          {purchaseUrl ? (
+            <a
+              href={purchaseUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="block w-full py-3 touch-manipulation"
+              aria-label={s.stickyBanner}
+            >
+              {s.stickyBanner}
+            </a>
+          ) : (
+            <div className="block w-full py-3 touch-manipulation">
+              {s.stickyBanner}
+            </div>
+          )}
         </div>
       )}
     </main>
